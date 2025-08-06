@@ -35,7 +35,7 @@
     }
 
     & .title p {
-        width: 28rem;
+        max-width: 28rem;
         margin-inline: auto;
         margin-top: 2rem;
         font: normal var(--text-body)/140% var(--ff-base);
