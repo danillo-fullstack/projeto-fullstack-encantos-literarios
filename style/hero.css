@@ -44,7 +44,7 @@
 }
 
 .subtitle {
-    margin-top: 6rem;
+    margin-top: 13.125rem;
 
     & p {
         max-width: 68.75rem;
@@ -66,18 +66,20 @@
         max-width: 5rem;
        
         &:nth-of-type(1) {
-            left: 2.5rem;
-            transform: rotate(110deg);
+            left: 18rem;
+            bottom: -33rem;
+            transform: rotate(99deg);
         }
 
         &:nth-of-type(2) {
-            top: 1.875rem;
+            top: 60rem;
             left: 50%;
             transform: rotate(30deg);
         }
         
         &:nth-of-type(3){
-            left: 90%;
+            left: 79.5%;
+            bottom: -33rem;
             transform: rotate(-15deg);
         }
     }
