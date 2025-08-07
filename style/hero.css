@@ -1,86 +1,95 @@
 #hero {
-    max-width: 90rem;
-    margin-inline: auto;
-    padding-inline: 10rem;
-    padding-top: 3.5rem;
-    background: url('../assets/hero-background.png') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: 10rem;
+  padding-top: 3.5rem;
+  background: url('../assets/hero-background.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
 
-    & nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        & a:nth-child(2) {
-            background-color: var(--pink-dark);
-            padding-inline: 1.25rem;
-            padding-block: 0.75rem;
-            border-radius: 0.5rem;
-            transition: background-color 200ms linear;
-        }
+    a:nth-child(2) {
+      background-color: var(--pink-dark);
+      padding-inline: 1.25rem;
+      padding-block: 0.75rem;
+      border-radius: 0.5rem;
+      transition: background-color 200ms linear;
 
-        & a:nth-child(2):hover {
-            background-color: var(--pink-base);
-            
-        }
+      &:hover {
+        background-color: var(--pink-base);
+      }
+    }
+  }
+
+  .title {
+    h1 {
+      max-width: 40.625rem;
+      margin-inline: auto;
+      margin-top: 6rem;
+      font: bold var(--title-lg) var(--ff-base);
+      text-align: center;
     }
 
-    & .title h1 {
-        max-width: 40.625rem;
-        margin-inline: auto;
-        margin-top: 10rem;
-        font: bold var(--title-lg) var(--ff-base);
-        text-align: center;
+    p {
+      max-width: 28rem;
+      margin-inline: auto;
+      margin-top: 2rem;
+      font: normal var(--text-body)/140% var(--ff-base);
+      text-align: center;
     }
-
-    & .title p {
-        max-width: 28rem;
-        margin-inline: auto;
-        margin-top: 2rem;
-        font: normal var(--text-body)/140% var(--ff-base);
-        text-align: center;
-    }
+  }
 }
 
 .subtitle {
-    margin-top: 13.125rem;
+  margin-top: 13.125rem;
+  position: relative;
 
-    & p {
-        max-width: 68.75rem;
-        margin-inline: auto;
-        font: normal 1.8rem/200% var(--ff-base);
-        text-align: center;
-        padding-block: 7.125rem;
-        padding-inline: 2rem;
-        position: relative;
+  p {
+    max-width: 68.75rem;
+    margin-inline: auto;
+    font: normal 1.8rem/200% var(--ff-base);
+    text-align: center;
+    padding-block: 7.125rem;
+    padding-inline: 2rem;
 
-        & span {
-           color: var(--blue-light);
-           font-weight: bold; 
-        }
+    span {
+      color: var(--blue-light);
+      font-weight: bold;
     }
+  }
+
+  .icons-decorations {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10rem;
 
     img {
         position: absolute;
         max-width: 5rem;
-       
-        &:nth-of-type(1) {
-            left: 18rem;
-            bottom: -33rem;
-            transform: rotate(99deg);
-        }
 
-        &:nth-of-type(2) {
-            top: 60rem;
-            left: 50%;
-            transform: rotate(30deg);
-        }
-        
-        &:nth-of-type(3){
-            left: 79.5%;
-            bottom: -33rem;
-            transform: rotate(-15deg);
-        }
+      &:nth-child(1) {
+        top: -7rem;
+        left: 15%;
+        transform: rotate(99deg);
+      }
+
+      &:nth-child(2) {
+        top: -20rem;
+        left: 50%;
+        transform: rotate(30deg);
+      }
+
+      &:nth-child(3) {
+        top: -7rem;
+        left: 80%;
+        transform: rotate(-15deg);
+      }
     }
+  }
 }
