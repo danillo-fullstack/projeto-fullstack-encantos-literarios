@@ -23,8 +23,22 @@
 
         & .precos {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            margin-inline: auto;
             margin-top: 3.5rem;
+
+            & div {
+                border: 1px solid red;
+                padding: 2rem;
+            }
+            & .semestral {
+                header {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
         }
+
+
     }
 }
