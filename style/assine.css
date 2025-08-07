@@ -1,0 +1,30 @@
+.assine {
+    padding-bottom: 18.875rem;
+    & h2 {
+        max-width: fit-content;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    & .assine-wrapper {
+        position: relative;
+        max-width: 65rem;
+        margin-inline: auto;
+
+        .fundo-borrado {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #3F0F41;;
+            filter: blur(300px);
+        }
+
+        & .precos {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3.5rem;
+        }
+    }
+}
