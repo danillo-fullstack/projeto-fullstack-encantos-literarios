@@ -1,5 +1,17 @@
 .assine {
     padding-bottom: 18.875rem;
+
+    & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        padding-block: 12px;
+        padding-inline: 52.5px;
+        text-align: center;
+        border-radius: 8px;
+    }
+
     & h2 {
         max-width: fit-content;
         margin-inline: auto;
@@ -19,6 +31,7 @@
             height: 100%;
             background: #3F0F41;;
             filter: blur(300px);
+            pointer-events: none;
         }
 
         & .precos {
@@ -26,19 +39,35 @@
             justify-content: center;
             margin-inline: auto;
             margin-top: 3.5rem;
+            & header {
 
-            & div {
-                border: 1px solid red;
-                padding: 2rem;
-            }
-            & .semestral {
-                header {
+                & div {
+                    border: 1px solid green;
                     display: flex;
+                    padding: 0;
+                    width: 100%;
                     justify-content: space-between;
+                }
+            } 
+            & > div {
+                border: 1px solid gray;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            & .mensal, & .anual {
+                & a {
+                    background-color: var(--blue-dark);
+                }
+            }
+
+            & .semestral {
+                & a {
+                    background-color: var(--pink-dark);
                 }
             }
         }
-
-
     }
 }
