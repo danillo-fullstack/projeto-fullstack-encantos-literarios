@@ -1,6 +1,7 @@
 .assine {
     padding-bottom: 18.875rem;
-    background: url(../assets/pricing-background.png) no-repeat;
+    background: url(../assets/pricing-background.png) no-repeat center center;
+    background-size: contain;
 
     & a {
         display: flex;
@@ -134,7 +135,7 @@
                     color: var(--pink-light);
                 }
 
-                & .bagde {
+                & .badge {
                     background-color: var(--shape-stroke);
                     font-size: 0.625rem;
                     color: var(--text-body);
