@@ -1,5 +1,6 @@
 .assine {
     padding-bottom: 18.875rem;
+    background: url(../assets/pricing-background.png) no-repeat;
 
     & a {
         display: flex;
@@ -22,48 +23,126 @@
         position: relative;
         max-width: 65rem;
         margin-inline: auto;
-
-        .fundo-borrado {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #3F0F41;;
-            filter: blur(300px);
-            pointer-events: none;
-        }
+        margin-top: 8rem;
 
         & .precos {
             display: flex;
             justify-content: center;
+            gap: 16px;
             margin-inline: auto;
             margin-top: 3.5rem;
-            & header {
 
+            & > div {
+                border-radius: 24px;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: var(--shape-base);
+                transition: background-color 200ms linear;
+                z-index: 1;
+            }
+
+            & > div:hover {
+                background-color: var(--shape-hover);
+            }
+
+            & header {
                 & div {
-                    border: 1px solid green;
                     display: flex;
                     padding: 0;
                     width: 100%;
                     justify-content: space-between;
                 }
+
+                & h3 {
+                    margin-bottom: 24px;
+                }
+
+                & p {
+                    font-size: var(--title-md);
+                    font-weight: 700;
+                }
+
+                & span {
+                    font-size: var(--title-xs);
+                }
+
+                & .preco {
+                    display: inline-block;
+                    margin-top: 8px;
+                    color: var(--text-label);
+                }
             } 
-            & > div {
-                border: 1px solid gray;
-                padding: 2rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+
+            &  ul {
+                margin-top: auto;
+                padding-top: 40px;
+                list-style: none;
+
+                & li {
+                    margin-block: 12px;
+                    font-size: 0.875rem;
+                    line-height: 160%;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                
             }
 
+            & a {
+                margin-top: 24px;
+            }
+
+            
             & .mensal, & .anual {
+                & h3 {
+                    font-size: var(--title-xs);
+                    font-weight: bold;
+                    color: var(--blue-light);
+                }
                 & a {
                     background-color: var(--blue-dark);
+                }
+
+                & li::before {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    background: url(../assets/vector-blue.svg) no-repeat center center;
                 }
             }
 
             & .semestral {
+                & header div{
+                    display: flex;
+                    align-items: center;
+                }
+
+                & li::before {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    background: url(../assets/vector.svg) no-repeat center center;
+                }
+
+                & h3 {
+                    font-size: var(--title-xs);
+                    font-weight: bold;
+                    color: var(--pink-light);
+                }
+
+                & .bagde {
+                    background-color: var(--shape-stroke);
+                    font-size: 0.625rem;
+                    color: var(--text-body);
+                    padding-inline: 20px;
+                    padding-block: 9px;
+                    border-radius: 999px;
+                }
+
                 & a {
                     background-color: var(--pink-dark);
                 }
