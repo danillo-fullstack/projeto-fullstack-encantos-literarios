@@ -29,6 +29,7 @@
         & .precos {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 16px;
             margin-inline: auto;
             margin-top: 3.5rem;
