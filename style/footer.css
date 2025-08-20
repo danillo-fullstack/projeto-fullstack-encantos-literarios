@@ -1,10 +1,10 @@
 .footer {
     background: url(../assets/book-trace-background.png) no-repeat top;
-    height: 415px;
     overflow: hidden;
-    padding-top: 170px;
+    padding-block: 150px;
     padding-inline: 160px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     & .footer-1 {
