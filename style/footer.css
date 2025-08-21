@@ -23,16 +23,20 @@
         gap: 1rem;
         
         & a {
-            padding: 2px;
             width: 2rem;
             height: 2rem;
             border-radius: 5rem;
             display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             z-index: 0;
 
             &:hover::before {
-                transform: scale(1);
+                transform: scale(1.5);
+                background-color: var(--shape-stroke);
+                display: flex;
+                justify-content: center;
             }
 
             &:hover svg path {
@@ -42,8 +46,7 @@
             &::before {
                 content: "";
                 inset: 0;
-                border-radius: inherit;
-                
+                border-radius: inherit;                
 
                 position: absolute;
                 z-index: -1;

@@ -6,6 +6,10 @@
   background: url('../assets/hero-background.png') no-repeat center center;
   background-size: cover;
   height: 100vh;
+  
+  opacity: 0;
+  transform: translateY(40px);
+  animation: subir 1.5s ease-in forwards;
 
   nav {
     display: flex;
@@ -55,10 +59,67 @@
     text-align: center;
     padding-block: 7.125rem;
     padding-inline: 2rem;
+    color: #787878;
 
     span {
-      color: var(--blue-light);
+      transition: color 0.5s ease-in-out;
+    }
+
+    strong {
       font-weight: bold;
+      transition: color 0.5s ease-in-out;
+    }
+
+  }
+
+  .icons-decorations {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    img {
+      width: 4rem;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .t1 { 
+      transition-delay: 0s; 
+    }
+    .t2 { 
+      transition-delay: 0.5s; 
+    }
+    .t3 { 
+      transition-delay: 1s; 
+    }
+  }
+
+  &:hover {
+    p {
+      color: var(--text-body);
+
+      .t1 { 
+        color: var(--blue-light); 
+        transition-delay: 0s;
+      }
+
+      .t2 { 
+        color: var(--blue-light); 
+        transition-delay: 0.5s; 
+      }
+
+      .t3 { 
+        color: var(--blue-light); 
+        transition-delay: 1s;
+      }
+
+      strong { color: var(--blue-light); }
+    }
+
+    .icons-decorations img {
+      opacity: 1;
     }
   }
 
@@ -70,8 +131,9 @@
     height: 10rem;
 
     img {
-        position: absolute;
-        max-width: 5rem;
+      position: absolute;
+      max-width: 5rem;
+      opacity: 0;
 
       &:nth-child(1) {
         top: -7rem;
@@ -93,3 +155,12 @@
     }
   }
 }
+
+/*==== Animação === */
+@keyframes subir {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
